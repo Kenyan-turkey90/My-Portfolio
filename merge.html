@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINDTECH - Chris Kariuki Macharia Portfolio</title>
+    <meta name="description" content="Chris Kariuki Macharia - Futuristic Web Developer, Designer, and Digital Expert. Explore my portfolio, services, and contact me for your next project.">
+    <link rel="stylesheet" href="merge.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Three.js for 3D effects (optional, see script section) -->
+    <style>
+      /* Example futuristic/3D CSS enhancements */
+      body {
+        background: linear-gradient(135deg, #0f2027, #2c5364, #1c92d2);
+        color: #e0e0e0;
+        font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+        overflow-x: hidden;
+      }
+      .neon {
+        color: #00fff7;
+        text-shadow: 0 0 8px #00fff7, 0 0 20px #00fff7;
+      }
+      .glass {
+        background: rgba(20, 40, 60, 0.7);
+        border-radius: 20px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255,255,255,0.18);
+      }
+      .profile-3d {
+        perspective: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .profile-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 4px solid #00fff7;
+        box-shadow: 0 0 40px #00fff7;
+        transform: rotateY(15deg) scale(1.05);
+        transition: transform 0.4s cubic-bezier(.25,.8,.25,1);
+      }
+      .profile-img:hover {
+        transform: rotateY(-15deg) scale(1.15);
+        box-shadow: 0 0 80px #00fff7, 0 0 40px #1c92d2;
+      }
+      .hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-3d-bg {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        z-index: 0;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+      }
+      /* Add more futuristic/3D styles as needed */
+    </style>
+</head>
+<body>
+  <!-- Header -->
+ <header class="header glass" id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo neon">MINDTECH - Chris Kariuki Macharia</a>
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="service.html" class="nav-link">Services</a></li>
+          <li><a href="#team" class="nav-link">Profile</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="mobile-toggle" id="mobile-toggle" type="button" aria-label="Open Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>
+ <!-- 3D Hero Section -->
+<section class="hero glass" id="home">
+  <div class="container">
+    <div class="hero-content">
+    <canvas id="hero3d" style="width:100%;height:300px;display:block;"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+      <h1 class="neon">Chris Kariuki Macharia</h1>
+      <p class="neon">Web Developer • Designer • 3D Artist • Digital Marketer</p>
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn btn-primary neon">View Portfolio</a>
+        <a href="#contact" class="btn btn-outline neon">Contact Me</a>
+      </div>
+      <div class="hero-social flex gap-3">
+        <a href="#"><i class="fab fa-facebook-f neon"></i></a>
+        <a href="#"><i class="fab fa-twitter neon"></i></a>
+        <a href="#"><i class="fab fa-instagram neon"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in neon"></i></a>
+        <a href="https://wa.me/254712345678" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- About Section (from your first code) -->
+  <section class="section about glass" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="profile-3d">
+          <img src="CHRIS LOGO.png" alt="Chris Kariuki Macharia" class="profile-img">
+        </div>
+        <div class="about-text">
+          <span class="badge badge-primary mb-3 neon">About Me</span>
+          <h2 class="neon">Chris Kariuki Macharia</h2>
+          <p>I am a passionate Web Developer with expertise in both front-end and back-end development, crafting seamless, dynamic, and responsive digital experiences. With a strong foundation in modern web technologies, I specialize in building intuitive interfaces, optimizing performance, and delivering user-centric solutions.</p>
+          <p>Beyond web development, I am a professional Graphic Designer, proficient in industry-leading tools such as Adobe Photoshop, Illustrator, InDesign, and Lightroom. Whether it’s branding, digital illustrations, or editorial designs, I bring creative visions to life with precision, color theory, and visual storytelling.</p>
+          <p>My skills extend into video editing and motion graphics, where I work with powerful platforms like DaVinci Resolve, Premiere Pro, and After Effects to produce high-quality cinematic visuals. From dynamic edits to compelling animations, I craft content that resonates with audiences.</p>
+          <p>Additionally, I am an experienced 3D Artist, harnessing the capabilities of Autodesk Maya, Blender, and 3ds Max to create realistic models, environments, and animations. Whether it's character modeling, architectural visualization, or dynamic animations, I bring imagination into reality with advanced 3D techniques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section (unchanged, but you can add 3D icons or effects in CSS) -->
+  <!-- ...keep your services section here... -->
+
+  <!-- Profile Section (Team, but only you) -->
+  <section class="section team glass" id="team">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="badge badge-primary mb-3 neon">My Profile</span>
+        <h2 class="neon">Meet the Creator</h2>
+        <p>Solo, but multi-talented. I bring a futuristic edge to every project.</p>
+      </div>
+      <div class="team-grid" style="justify-content:center;">
+        <div class="team-card glass">
+          <div class="team-image profile-3d">
+            <img src="profile.png" alt="Chris Kariuki" class="profile-img">
+          </div>
+          <div class="team-info">
+            <h3 class="neon">Chris Kariuki Macharia</h3>
+            <p>Web Developer, Designer, 3D Artist & Digital Marketer</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+<!-- Portfolio Section -->
+<section class="section portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-title text-center">
+      <span class="badge badge-primary mb-3 neon">My Portfolio</span>
+      <h2 class="neon">Recent Projects</h2>
+      <p>Check out some of my recent projects that showcase my expertise and creativity.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=764&q=80" alt="Web Design Project">
+        </div>
+        <div class="portfolio-overlay">
+          <h3>E-commerce Website</h3>
+          <p>Web Design & Development</p>
+          <a href="#" class="portfolio-button">View Details</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="Graphic Design Project">
+        </div>
+        <div class="portfolio-overlay">
+          <h3>Brand Identity</h3>
+          <p>Graphic Design</p>
+          <a href="#" class="portfolio-button">View Details</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Digital Marketing Project">
+        </div>
+        <div class="portfolio-overlay">
+          <h3>Marketing Campaign</h3>
+          <p>Digital Marketing</p>
+          <a href="#" class="portfolio-button">View Details</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="App Development Project">
+        </div>
+        <div class="portfolio-overlay">
+          <h3>Mobile App</h3>
+          <p>App Development</p>
+          <a href="#" class="portfolio-button">View Details</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Content Writing Project">
+        </div>
+        <div class="portfolio-overlay">
+          <h3>Blog Articles</h3>
+          <p>Content Writing</p>
+          <a href="#" class="portfolio-button">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section portfolio glass" id="portfolio">
+  <div class="container">
+    <div class="section-title text-center">
+      <span class="badge badge-primary mb-3 neon">My Portfolio</span>
+      <h2 class="neon">Recent Projects</h2>
+      <p>Explore my interactive 3D work and digital creations.</p>
+    </div>
+    <div class="portfolio-grid">
+      <!-- 3D Model Embed Example -->
+      <div class="portfolio-item glass">
+        <div class="portfolio-image" style="height:250px;">
+          <!-- Replace with your own Sketchfab model or use this sample -->
+          <iframe title="3D Model" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+            allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+            width="100%" height="250"
+            src="https://sketchfab.com/models/7w7pAfrQzv7/embed">
+          </iframe>
+        </div>
+        <div class="portfolio-overlay">
+          <h3>Futuristic 3D Sphere</h3>
+          <p>Interactive 3D asset using Sketchfab.</p>
+          <a href="https://sketchfab.com/3d-models/7w7pAfrQzv7" target="_blank" class="portfolio-button">View 3D</a>
+        </div>
+      </div>
+      <!-- Add more portfolio items as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <div class="section-title text-center">
+      <span class="badge badge-primary mb-3 neon">My Pricing</span>
+      <h2 class="neon">Affordable Packages</h2>
+      <p>Choose the perfect package that fits your business needs and budget.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="pricing-name">Basic</h3>
+          <div class="pricing-price">$15</div>
+          <div class="pricing-duration">Per Month</div>
+        </div>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>1 Business Profile</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>10 Logo Design Options</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>1 Hour Customer Support</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>30 Days Maintenance</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>24/7 Email Support</span>
+          </div>
+        </div>
+        <div class="pricing-button">
+          <a href="#contact" class="btn btn-outline">Get Started</a>
+        </div>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-header">
+          <h3 class="pricing-name">Premium</h3>
+          <div class="pricing-price">$50</div>
+          <div class="pricing-duration">Per Month</div>
+        </div>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>3 Business Profiles</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>20 Logo Design Options</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>5 Hours Customer Support</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>60 Days Maintenance</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>24/7 Priority Support</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>Social Media Management</span>
+          </div>
+        </div>
+        <div class="pricing-button">
+          <a href="#contact" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="pricing-name">Enterprise</h3>
+          <div>$100</div>
+          <div class="pricing-duration">Per Month</div>
+        </div>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>10 Business Profiles</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>Unlimited Logo Designs</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>Dedicated Support Team</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>Lifetime Maintenance</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>24/7 VIP Support</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>Full Digital Marketing Suite</span>
+          </div>
+          <div class="pricing-feature">
+            <i class="fas fa-check"></i>
+            <span>Custom App Development</span>
+          </div>
+        </div>
+        <div class="pricing-button">
+          <a href="#contact" class="btn btn-outline">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <h2 >Ready to Grow Your Business?</h2>
+    <p>Let's work together to take your business to the next level with my professional digital services.</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn btn-light">Contact Me</a>
+      <a href="#services" class="btn btn-outline-light">My Services</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-title text-center">
+      <span class="badge badge-primary mb-3 neon">Contact Me</span>
+      <h2 class="neon">Get In Touch</h2>
+      <p>Have a project in mind? Let's discuss how I can help you achieve your goals.</p>
+    </div>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h2>Let's Talk About Your Project</h2>
+        <p>I'm excited to hear about your project and how I can help you achieve your goals. Fill out the form or contact me directly using the information below.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Location</h4>
+              <p>Nairobi, Kenya</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <p>+254 716010237</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p>machariachris90@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-social">
+          <h4>Follow Me</h4>
+          <div class="flex gap-3 mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+      <form class="contact-form" action="message.php" method="post">
+  <div class="form-group">
+    <label class="form-label" for="name">Name</label>
+    <input class="form-control" type="text" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="email">Email</label>
+    <input class="form-control" type="email" id="email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="subject">Subject</label>
+    <input class="form-control" type="text" id="subject" name="subject" required>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="message">Message</label>
+    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary neon">Send Message</button>
+</form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Portfolio, Pricing, CTA, Contact, Footer, WhatsApp, and JS sections remain as in your second code -->
+  <!-- ...copy those sections here unchanged... -->
+
+  <!-- Portfolio Section -->
+  <!-- ...existing portfolio section... -->
+
+  <!-- Pricing Section -->
+  <!-- ...existing pricing section... -->
+
+  <!-- CTA Section -->
+  <!-- ...existing cta section... -->
+
+  <!-- Contact Section -->
+  <!-- ...existing contact section... -->
+
+  <!-- Footer -->
+  <!-- ...existing footer section... -->
+
+  <!-- WhatsApp Button and Popup -->
+<a href="https://wa.me/254712345678" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+  <!-- ...existing WhatsApp button and popup... -->
+
+  <!-- JavaScript for interactivity and 3D background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileClose = document.getElementById('mobile-close');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      navMenu.classList.add('active');
+    });
+
+    mobileClose.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+
+    // Close mobile menu when clicking on a nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Sticky Header
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // WhatsApp Button
+    const whatsappBtn = document.getElementById('whatsappBtn');
+    const whatsappPopup = document.getElementById('whatsappPopup');
+    const whatsappClose = document.getElementById('whatsappClose');
+
+    whatsappBtn.addEventListener('click', () => {
+      whatsappPopup.classList.toggle('show');
+    });
+
+    whatsappClose.addEventListener('click', () => {
+      whatsappPopup.classList.remove('show');
+    });
+
+    // Close WhatsApp popup when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!whatsappBtn.contains(e.target) && !whatsappPopup.contains(e.target)) {
+        whatsappPopup.classList.remove('show');
+      }
+    });
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        // Here you would typically send the form data to a server
+        // For now, we'll just log it and show an alert
+        console.log({ name, email, subject, message });
+        alert('Thank you for your message! We will get back to you soon.');
+        contactForm.reset();
+      });
+    }
+
+    // Simple 3D background using Three.js (futuristic effect)
+    // You can customize this further!
+    const canvas = document.getElementById('hero3d');
+    if (canvas) {
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 600, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+      renderer.setSize(window.innerWidth, 600);
+
+      // Add a rotating 3D torus
+      const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
+      const material = new THREE.MeshStandardMaterial({ color: 0x00fff7, emissive: 0x1c92d2, metalness: 0.8, roughness: 0.2 });
+      const torus = new THREE.Mesh(geometry, material);
+      scene.add(torus);
+
+      // Lighting
+      const pointLight = new THREE.PointLight(0xffffff, 1, 100);
+      pointLight.position.set(20, 20, 20);
+      scene.add(pointLight);
+
+      camera.position.z = 30;
+
+      function animate() {
+        requestAnimationFrame(animate);
+        torus.rotation.x += 0.01;
+        torus.rotation.y += 0.013;
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, 600);
+        camera.aspect = window.innerWidth / 600;
+        camera.updateProjectionMatrix();
+      });
+    }
+  </script>
+  <!-- Three.js CDN for 3D background -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // 3D Neon Sphere
+      const canvas = document.getElementById('hero3d');
+      if (!canvas) return;
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+      renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, canvas.offsetWidth / canvas.offsetHeight, 0.1, 1000);
+      camera.position.z = 3;
+      // Neon glow
+      const geometry = new THREE.SphereGeometry(1, 64, 64);
+      const material = new THREE.MeshPhysicalMaterial({
+        color: 0x00fff7,
+        roughness: 0.1,
+        metalness: 1,
+        clearcoat: 1,
+        clearcoatRoughness: 0.1,
+        emissive: 0x00fff7,
+        emissiveIntensity: 0.7
+      });
+      const sphere = new THREE.Mesh(geometry, material);
+      scene.add(sphere);
+      // Animate
+      function animate() {
+        requestAnimationFrame(animate);
+        sphere.rotation.y += 0.005;
+        renderer.render(scene, camera);
+      }
+      animate();
+      window.addEventListener('resize', () => {
+        renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+        camera.aspect = canvas.offsetWidth / canvas.offsetHeight;
+        camera.updateProjectionMatrix();
+      });
+    });
+  </script>
+  <canvas id="hero3d" style="width:100%;height:300px;display:block;"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.getElementById('hero3d');
+  if (!canvas) return;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, canvas.offsetWidth / canvas.offsetHeight, 0.1, 1000);
+  camera.position.z = 2.5;
+
+  // Lighting
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+  scene.add(ambientLight);
+  const pointLight = new THREE.PointLight(0x00fff7, 1, 100);
+  pointLight.position.set(5, 5, 5);
+  scene.add(pointLight);
+
+  // Load your profile image as a texture
+  const loader = new THREE.TextureLoader();
+  loader.load('CHRIS LOGO.png', function(texture) {
+    const geometry = new THREE.SphereGeometry(1, 64, 64);
+    const material = new THREE.MeshPhysicalMaterial({
+      map: texture,
+      roughness: 0.1,
+      metalness: 0.7,
+      clearcoat: 1,
+      clearcoatRoughness: 0.1,
+      emissive: 0x00fff7,
+      emissiveIntensity: 0.15
+    });
+    const sphere = new THREE.Mesh(geometry, material);
+    scene.add(sphere);
+
+    // Animate
+    function animate() {
+      requestAnimationFrame(animate);
+      sphere.rotation.y += 0.008;
+      renderer.render(scene, camera);
+    }
+    animate();
+  });
+
+  window.addEventListener('resize', () => {
+    renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+    camera.aspect = canvas.offsetWidth / canvas.offsetHeight;
+    camera.updateProjectionMatrix();
+  });
+});
+</script>
+<script>
+  // Responsive Mobile Menu Toggle
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  mobileToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // Optional: Close menu when a link is clicked (for better UX)
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Chris Kariuki Macharia</title>
+  <link rel="stylesheet" href="merge.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .services-3d-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1rem auto;
+      display: block;
+      filter: drop-shadow(0 0 12px #00fff7);
+      border-radius: 50%;
+      background: rgba(20,40,60,0.6);
+      padding: 10px;
+    }
+    .service-card {
+      background: rgba(20, 40, 60, 0.7);
+      border-radius: 18px;
+      box-shadow: 0 4px 32px rgba(0,255,247,0.08);
+      padding: 2.5rem 1.5rem 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 0 40px #00fff7;
+    }
+    .service-card .neon {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .service-card .service-desc {
+      color: #b2f7f7;
+      margin-bottom: 1.2rem;
+    }
+    .service-card .btn {
+      margin-top: 1rem;
+    }
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    @media (max-width: 900px) {
+      .services-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header glass" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="merge.html" class="logo neon">MINDTECH - Chris Kariuki Macharia</a>
+        <nav>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="merge.html#home" class="nav-link">Home</a></li>
+            <li><a href="merge.html#about" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link neon">Services</a></li>
+            <li><a href="merge.html#team" class="nav-link">Profile</a></li>
+            <li><a href="merge.html#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="merge.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="section glass" id="services" style="margin-top:100px;">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="badge badge-primary mb-3 neon">My Services</span>
+        <h2 class="neon">What I Offer</h2>
+        <p>Futuristic digital solutions for your business, brand, and creative vision.</p>
+      </div>
+      <div class="services-grid">
+        <!-- Web Development -->
+        <div class="service-card glass">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Web Dev" class="services-3d-icon">
+          <span class="neon"><i class="fas fa-code"></i> Web Development</span>
+          <div class="service-desc">
+            Modern, responsive, and high-performance websites using the latest technologies (HTML5, CSS3, JavaScript, React, Node.js, PHP, and more).
+          </div>
+          <a href="merge.html#portfolio" class="btn btn-outline">See Projects</a>
+        </div>
+        <!-- Graphic Design -->
+        <div class="service-card glass">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Graphic Design" class="services-3d-icon">
+          <span class="neon"><i class="fas fa-paint-brush"></i> Graphic Design</span>
+          <div class="service-desc">
+            Creative branding, logos, digital illustrations, and editorial design using Adobe Photoshop, Illustrator, InDesign, and Lightroom.
+          </div>
+          <a href="merge.html#portfolio" class="btn btn-outline">See Designs</a>
+        </div>
+        <!-- 3D Art & Animation -->
+        <div class="service-card glass">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="3D Art" class="services-3d-icon">
+          <span class="neon"><i class="fas fa-cube"></i> 3D Art & Animation</span>
+          <div class="service-desc">
+            Realistic 3D models, environments, and animations using Blender, Autodesk Maya, and 3ds Max. Interactive 3D assets for web and AR/VR.
+          </div>
+          <a href="merge.html#portfolio" class="btn btn-outline">View 3D Work</a>
+        </div>
+        <!-- Video Editing & Motion Graphics -->
+        <div class="service-card glass">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" alt="Video Editing" class="services-3d-icon">
+          <span class="neon"><i class="fas fa-film"></i> Video Editing & Motion Graphics</span>
+          <div class="service-desc">
+            Cinematic video edits, motion graphics, and animations using DaVinci Resolve, Premiere Pro, and After Effects.
+          </div>
+          <a href="merge.html#portfolio" class="btn btn-outline">See Videos</a>
+        </div>
+        <!-- Digital Marketing -->
+        <div class="service-card glass">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Digital Marketing" class="services-3d-icon">
+          <span class="neon"><i class="fas fa-bullhorn"></i> Digital Marketing</span>
+          <div class="service-desc">
+            SEO, social media management, content creation, and full digital marketing strategies to grow your business online.
+          </div>
+          <a href="merge.html#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer glass" style="margin-top:40px;">
+    <div class="container text-center">
+      <div class="footer-social mb-3">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/254712345678" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div>
+        &copy; <span id="year"></span> Chris Kariuki Macharia. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
